@@ -82,3 +82,33 @@ section[data-id="4"] .bg {
 section[data-id="5"] .bg {
   background-image: url('https://picsum.photos/seed/5/1920/1080');
 }
+
+
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.social-bar {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #ff6347;
+}
