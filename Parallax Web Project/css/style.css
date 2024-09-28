@@ -1,3 +1,7 @@
+body{
+scroll-behavior: smooth;
+}
+
 /* Bullet Navigation Bar */
 .bullet-nav {
   position: fixed;
@@ -34,10 +38,12 @@ body {
 
 section {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .bg {
@@ -64,19 +70,19 @@ h1 {
 
 /* Background images for each section */
 section[data-id="1"] .bg {
-  background-image: url('https://picsum.photos/seed/1/1920/1080');
+  background-image: url('../images/pexels-apasaric-2078071.jpg');
 }
 
 section[data-id="2"] .bg {
-  background-image: url('https://picsum.photos/seed/2/1920/1080');
+  background-image: url('../images/pexels-olly-787961.jpg');
 }
 
 section[data-id="3"] .bg {
-  background-image: url('https://picsum.photos/seed/3/1920/1080');
+  background-image: url('../images/pexels-elevate-1267350.jpg');
 }
 
 section[data-id="4"] .bg {
-  background-image: url('https://picsum.photos/seed/4/1920/1080');
+  background-image: url('../images/pexels-cottonbro-6531464.jpg');
 }
 
 section[data-id="5"] .bg {
@@ -150,21 +156,31 @@ section[data-id="3"] .right-side p {
 
 /* Adjust background and text to maintain consistency */
 section[data-id="3"] .bg {
-  background-image: url('https://picsum.photos/seed/3/1920/1080');
+  background-image: url('./../images/pexels-elevate-1267350.jpg');
 }
 
 /*-----------------------------4th section-----------------------------------*/
 /* Video Grid Layout */
 /* Video Grid Layout */
-section[data-id="4"] .video-grid {
+ .video-grid {
+  padding: 40px 20;
+  border: 1ox solid red;
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 videos per row */
   gap: 20px;
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  
+  z-index: 1; 
 }
 
+
+#title-4{
+  display: block;
+  padding-block: 20px;
+  text-align: center;
+}
 .video-item {
   text-align: center;
 }
@@ -177,33 +193,14 @@ section[data-id="4"] .video-grid {
 .video-item p {
   margin-top: 10px;
   font-size: 1.2em;
-  color: #333;
+  color: #ebebeb;
   font-weight: bold;
 }
 
 /* Ensure the section background is properly set */
-section[data-id="4"] .bg {
-  background-image: url('https://picsum.photos/seed/4/1920/1080');
-}
 
-/* Responsive Design - Adjust to fewer columns on smaller screens */
-@media (max-width: 1200px) {
-  .video-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 videos per row on medium screens */
-  }
-}
 
-@media (max-width: 768px) {
-  .video-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 videos per row on small screens */
-  }
-}
 
-@media (max-width: 480px) {
-  .video-grid {
-    grid-template-columns: 1fr; /* 1 video per row on very small screens */
-  }
-}
 
 /*--------------------------nav bar---------------------------*/
 /* Navbar container */
@@ -215,6 +212,7 @@ section[data-id="4"] .bg {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
   border-radius: 8px;
+  z-index: 9999;
 }
 
 #navbar ul {
@@ -252,9 +250,99 @@ section[data-id="4"] .bg {
 }
 
 /* Styling sections for demo */
-section {
-  padding: 100px 20px;
-  height: 600px;
-  border: 1px solid #ccc;
+
+
+.image-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* Adjust the gap between images */
+  padding: 20px; /* Add padding around the grid */
+  max-width: 1200px; /* Limit the grid's max width */
+  margin: 0 auto; /* Center the grid on the page */
 }
 
+
+section[data-id="5"]{
+  min-height: fit-content;
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+}
+
+a[data-fancybox="gallery"]{
+  display: block;
+  width: 100%; /* Make the anchor take full width */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  overflow: hidden; /* Hide overflow if images exceed boundaries */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow effect */
+}
+
+a[data-fancybox="gallery"] img{
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Ensure the images cover the container area */
+}
+
+
+.fancybox-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* Adjust the gap between images */
+  padding: 20px; /* Add padding around the grid */
+  max-width: 1200px; /* Limit the grid's max width */
+  margin: 0 auto; /* Center the grid on the page */
+}
+
+.fancybox-grid a {
+  display: block;
+  width: 100%; /* Make the anchor take full width */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  overflow: hidden; /* Hide overflow if images exceed boundaries */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow effect */
+}
+
+ img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16/9; /* Set desired aspect ratio (e.g., 16:9 or 4:3) */
+  object-fit: cover; 
+}
+
+
+
+/* Responsive Design - Adjust to fewer columns on smaller screens */
+@media (max-width: 1200px) {
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 videos per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 videos per row on small screens */
+  }
+ 
+
+  .image-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+ 
+  }
+  
+  
+}
+
+@media (max-width: 480px) {
+  .video-grid {
+    grid-template-columns: 1fr; /* 1 video per row on very small screens */
+  }
+  .image-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 columns */
+ 
+  }
+}
