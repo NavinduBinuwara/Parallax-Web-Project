@@ -136,9 +136,12 @@ section[data-id="3"] .content-wrapper {
 
 section[data-id="3"] .left-side img {
   max-width: 100%;
-  height: auto;
+  height: 100vh;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.gallery-img{
+  border-radius: 20%;
 }
 
 section[data-id="3"] .right-side {
@@ -150,13 +153,21 @@ section[data-id="3"] .right-side {
 section[data-id="3"] .right-side p {
   font-size: 1.2em;
   line-height: 1.6;
-  color: #f0f0f0;
+  color: #000000;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
-/* Adjust background and text to maintain consistency */
 section[data-id="3"] .bg {
   background-image: url('./../images/pexels-elevate-1267350.jpg');
+}
+
+.gallery-content{
+background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('your-image-url.jpg');
+background-size: cover;
+background-position: center;
+text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); 
+
+
 }
 
 /*-----------------------------4th section-----------------------------------*/

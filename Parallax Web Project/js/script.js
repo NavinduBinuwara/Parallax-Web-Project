@@ -35,3 +35,8 @@ navLinks.forEach(link => {
     }
   });
 });
+
+
+/* ------- AOS Animation ------------ */
+
+  AOS.init();
