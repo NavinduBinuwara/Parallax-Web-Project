@@ -57,45 +57,47 @@ const nextBtn = document.querySelector('.next');
 const prevBtn = document.querySelector('.prev');
 let currentIndex = 0;
 
-const slideWidth = window.innerWidth;
+const totalSlides = slideImages.length;
+const slidesPerView = 3; // Show 3 slides per view
+const autoSlideDuration = 3000; // 3 seconds for auto slider
 
-// Animate the slides' parallax effect
+// Function to apply the smooth parallax effect on slides
 function applyParallaxEffect() {
-  gsap.to(slideImages, {
-    xPercent: -100 * currentIndex,
-    ease: "power2.out",
-    duration: 1.2,
-    stagger: {
-      each: 0.1,
-      onStart: function () {
-        gsap.to(this.target, {
-          scale: 1.05,
-          duration: 1.2,
-          ease: "power2.out",
-        });
-      },
-      onComplete: function () {
-        gsap.to(this.target, {
-          scale: 1,
-          duration: 1,
-          ease: "power2.out",
-        });
-      }
-    }
+  gsap.to(slides, {
+    xPercent: -100 * (currentIndex / slidesPerView),
+    ease: "power3.inOut",  // Smooth animation easing
+    duration: 1.5,         // Adjusted duration for smoothness
   });
 }
 
-// Next slide
-nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % slideImages.length;
+// Function to move to the next slide
+function nextSlide() {
+  currentIndex = (currentIndex + slidesPerView) % totalSlides;
   applyParallaxEffect();
-});
+}
 
-// Previous slide
-prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + slideImages.length) % slideImages.length;
+// Function to move to the previous slide
+function prevSlide() {
+  currentIndex = (currentIndex - slidesPerView + totalSlides) % totalSlides;
   applyParallaxEffect();
-});
+}
 
-// Initial load parallax animation
+// Next button click event
+nextBtn.addEventListener('click', nextSlide);
+
+// Previous button click event
+prevBtn.addEventListener('click', prevSlide);
+
+// Auto slide logic
+let autoSlider = setInterval(nextSlide, autoSlideDuration);
+
+// Pause auto slider on button hover (optional)
+nextBtn.addEventListener('mouseenter', () => clearInterval(autoSlider));
+prevBtn.addEventListener('mouseenter', () => clearInterval(autoSlider));
+
+// Resume auto slider when hover ends (optional)
+nextBtn.addEventListener('mouseleave', () => autoSlider = setInterval(nextSlide, autoSlideDuration));
+prevBtn.addEventListener('mouseleave', () => autoSlider = setInterval(nextSlide, autoSlideDuration));
+
+// Initial parallax animation on page load
 applyParallaxEffect();
