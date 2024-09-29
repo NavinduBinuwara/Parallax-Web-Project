@@ -385,31 +385,33 @@ a[data-fancybox="gallery"] img{
 
 /* scale x section */
 
-#section-null{
-
+#section-2{
+      
   display: flex;
    justify-content: center;
    align-items: center;
 }
   
 .card {
-  width: 50px;
+  width: 200px;
   height: 200px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  perspective: 100px;
 
 }
 .card[data-item="left"]{
 transform-origin: right center; 
 
 }
-
 .image-container {
+  perspective: 200px;
 position: absolute;
 top: 0;
 left: 0;
 width: 100%;
-height: 300%; /* Make the image much larger than the card for the parallax effect */
+height: 100%; /* Make the image much larger than the card for the parallax effect */
 /* background-image: url('https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=600'); */
 background-position: center center;
 background-repeat: no-repeat;
@@ -418,13 +420,21 @@ background-size: cover;
 
 }
 .image-container[data-item="left"]{
+
+  object-fit: cover;
   background-image: url(../images/11.JPG);
+
+
+  transform-origin: left center;
 }
 .image-container[data-item="right"]{
+  object-fit: cover;
   background-image: url(../images/61.JPG);
+  transform-origin: left center;
+  border-radius: 10%;
 }
 .mid-image{
-
+  border-radius: 10%;
   height:100%;
   width:100%;
   object-fit:cover;
@@ -436,14 +446,14 @@ background-attachment: fixed;
 background-position:left;
 background-repeat: no-repeat;
 background-size: cover;
+border-radius: 10%;
 }
 .outer{
   padding:20px;
 width:100%;
 margin-inline: auto;
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-
+display: flex;
+gap:30px;
 
 
 }
@@ -452,8 +462,8 @@ display: flex;
 flex-direction: column;
 
 
-height:400px;
-width:300px; 
+width: 200px;
+height: 200px;
 }
 
 
