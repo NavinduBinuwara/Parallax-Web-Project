@@ -167,6 +167,51 @@ text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 
 }
 
+
+/*-------------------------parallax effect ---------------------------------*/
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s ease;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+button {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 /*-----------------------------4th section-----------------------------------*/
 /* Video Grid Layout */
 /* Video Grid Layout */
@@ -379,94 +424,3 @@ a[data-fancybox="gallery"] img{
  
   }
 }
-
-
-
-
-/* scale x section */
-
-#section-null{
-
-  display: flex;
-   justify-content: center;
-   align-items: center;
-}
-  
-.card {
-  width: 50px;
-  height: 200px;
-  position: relative;
-  overflow: hidden;
-
-}
-.card[data-item="left"]{
-transform-origin: right center; 
-
-}
-
-.image-container {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 300%; /* Make the image much larger than the card for the parallax effect */
-/* background-image: url('https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=600'); */
-background-position: center center;
-background-repeat: no-repeat;
-background-size: cover;
-
-
-}
-.image-container[data-item="left"]{
-  background-image: url(../images/11.JPG);
-}
-.image-container[data-item="right"]{
-  background-image: url(../images/61.JPG);
-}
-.mid-image{
-
-  height:100%;
-  width:100%;
-  object-fit:cover;
-
-}
-.card[data-item="right"]{
-transform-origin: left center;
-background-attachment: fixed;
-background-position:left;
-background-repeat: no-repeat;
-background-size: cover;
-}
-.outer{
-  padding:20px;
-width:100%;
-margin-inline: auto;
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-
-
-
-}
-.grid-item{
-display: flex;
-flex-direction: column;
-
-
-height:400px;
-width:300px; 
-}
-
-
-.grid-item[data-item="left"]{
-  justify-content: start;
-  align-items: end;
-}
-
-.grid-item[data-item="right"]{
-
-  align-items:start;
-  justify-content: end;
-}
-
-
-

@@ -46,3 +46,56 @@ document.addEventListener('DOMContentLoaded', function() {
         closeExisting: true,
     });
 });
+
+
+
+
+/*--------------------parallax slider -------------------------- */
+const slides = document.querySelector('.slides');
+const slideImages = document.querySelectorAll('.slide');
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+let currentIndex = 0;
+
+const slideWidth = window.innerWidth;
+
+// Animate the slides' parallax effect
+function applyParallaxEffect() {
+  gsap.to(slideImages, {
+    xPercent: -100 * currentIndex,
+    ease: "power2.out",
+    duration: 1.2,
+    stagger: {
+      each: 0.1,
+      onStart: function () {
+        gsap.to(this.target, {
+          scale: 1.05,
+          duration: 1.2,
+          ease: "power2.out",
+        });
+      },
+      onComplete: function () {
+        gsap.to(this.target, {
+          scale: 1,
+          duration: 1,
+          ease: "power2.out",
+        });
+      }
+    }
+  });
+}
+
+// Next slide
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slideImages.length;
+  applyParallaxEffect();
+});
+
+// Previous slide
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + slideImages.length) % slideImages.length;
+  applyParallaxEffect();
+});
+
+// Initial load parallax animation
+applyParallaxEffect();
