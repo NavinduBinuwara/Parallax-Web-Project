@@ -34,7 +34,8 @@ bullets.forEach(bullet => {
     
     
     gsap.to(window, {
-      duration: 1,  
+      duration: 5000, 
+      delay:6000, 
       scrollTo: targetSection 
     });
   });
