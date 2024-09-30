@@ -70,31 +70,36 @@ h1 {
   margin-top: 10%;
 }
 
+.parallax-img{
+  width: fit-content;
+  height: 100%;
+  margin: auto;
+}
+
 /* Background images for each section */
 section[data-id="1"] .bg {
-
     text-align: center;
-  background-image: url('../images/18.jpeg');
+  background-image: url('../images/backgdound\ 2.jpg');
 }
 
 section[data-id="2"] .bg {
-  background-image: url('../images/52.JPG');
+  background-image: url('../images/backgdound\ 2.jpg');
 }
 
 section[data-id="3"] .bg {
-  background-image: url('../images/4.jpeg');
+  background-image: url('../images/backgdound\ 2.jpg');
 }
 
 section[data-id="4"] .bg {
-  background-image: url('../images/42.JPG');
+  background-image: url('../images/backgdound\ 2.jpg');
   
 }
 
 section[data-id="5"] .bg {
-  background-image: url('../images/3.jpeg');
+  background-image: url('../images/backgdound\ 2.jpg');
 }
 section[data-id="7"] .bg {
-  background-image: url('../images//52.JPG');
+  background-image: url('../images/backgdound\ 2.jpg');
 }
 
 
@@ -166,7 +171,7 @@ section[data-id="3"] .right-side p {
 }
 
 section[data-id="3"] .bg {
-  background-image: url('../images/4.jpeg');
+  background-image: url('../images/backgdound\ 2.jpg');
 }
 
 .gallery-content{
@@ -398,13 +403,7 @@ a[data-fancybox="gallery"] img{
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow effect */
 }
 
- img {
-  width: 100%;
-  height: auto;
-  display: block;
-  aspect-ratio: 16/9; /* Set desired aspect ratio (e.g., 16:9 or 4:3) */
-  object-fit: cover; 
-}
+
 
 
 
