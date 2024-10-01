@@ -391,7 +391,7 @@ a[data-fancybox="gallery"]{
 
 a[data-fancybox="gallery"] img{
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   object-fit: cover; /* Ensure the images cover the container area */
 }
