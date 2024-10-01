@@ -74,12 +74,23 @@ h1 {
   width: fit-content;
   height: 100%;
   margin: auto;
+  
 }
+
+/* section one name */
+.name{
+ transform: rotate(15deg);
+ z-index:1;
+
+ top:950vh;
+ right:-40vw;
+}
+/* section one name */
 
 /* Background images for each section */
 section[data-id="1"] .bg {
     text-align: center;
-  background-image: url('../images/backgdound\ 2.jpg');
+  background-image: url('../images/background.png');
 }
 
 section[data-id="2"] .bg {
