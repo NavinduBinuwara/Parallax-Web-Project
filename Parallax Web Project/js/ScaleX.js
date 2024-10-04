@@ -107,7 +107,7 @@
   const A3 = gsap.timeline({
     scrollTrigger: {
       trigger: "#section3",
-      start: "top 150%",  // Start the animation when the section's top hits the center of the viewport
+      start: "top 100%",  // Start the animation when the section's top hits the center of the viewport
       end: "bottom center", // End when the section's bottom hits the center of the viewport
       scrub: 1, // Smooth animation on scroll
  
@@ -175,3 +175,30 @@
   //   x:0,
   //   duration: 0.8,
   // })
+
+  gsap.to('#dj2', {
+    scale: 3,
+    y:300,
+    scrollTrigger: {
+      trigger: "#section4",
+      start: "top 80%", 
+      end: "bottom top", 
+      scrub: true, 
+    },
+    ease: "slow(0.7,0.7,false)",
+  });
+
+
+
+  sap.from(".title", {
+    scrollTrigger: {
+      trigger: ".title", // Element to trigger the animation
+      start: "top 80%",  // When the top of the title hits 80% of the viewport
+     
+    },
+    duration: 4,   
+    delay:2,// Animation duration (2 seconds)
+    x: -200,       // Slide in from left (-200px)
+    opacity: 0,    // Fade in from opacity 0
+    ease: "power2.out" // Ease effect for a smooth transition
+  });

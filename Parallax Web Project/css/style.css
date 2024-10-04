@@ -251,7 +251,7 @@ button:hover {
   padding: 40px 20;
   border: 1ox solid red;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 videos per row */
+  grid-template-columns: repeat(3, 1fr); /* 4 videos per row */
   gap: 20px;
   padding: 20px;
   max-width: 1200px;
@@ -260,10 +260,14 @@ button:hover {
   z-index: 1; 
 }
 
-
+.wrapper-main{
+  position: relative;
+  display: flex;
+  
+}
 #title-4{
   display: block;
-  padding-block: 20px;
+  padding-block: 10px;
   text-align: center;
 }
 .video-item {
@@ -278,9 +282,10 @@ button:hover {
 
 }
 .video-item:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  opacity: 0.9;
+  transform: rotatez(2deg);
+   opacity: 0.9;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6)), url('your-hover-image-url.jpg');
   background-size: cover;
   background-position: center;
@@ -307,6 +312,14 @@ button:hover {
   font-weight: bold;
 }
 
+#dj2{
+ 
+ height:400px;
+
+
+
+
+}
 /* Ensure the section background is properly set */
 
 
