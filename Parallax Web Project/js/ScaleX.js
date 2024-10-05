@@ -2,6 +2,7 @@
    const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".mid-image",
+      
       start: "top 90%",  // Start the animation when the section's top hits the center of the viewport
       end: "bottom center", // End when the section's bottom hits the center of the viewport
       scrub: true, // Smooth animation on scroll
@@ -61,6 +62,11 @@
   // Second phase: Shrink the card back to its original size
 
   const image = document.querySelector('.parallax-img');
+
+
+
+
+
   const name = document.querySelector('.name');
 
   gsap.to(image, {
