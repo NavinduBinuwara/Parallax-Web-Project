@@ -81,7 +81,6 @@ h1 {
 .name{
  transform: rotate(15deg);
  z-index:1;
-
  top:950vh;
  right:-40vw;
 }
@@ -94,23 +93,23 @@ section[data-id="1"] .bg {
 }
 
 section[data-id="2"] .bg {
-  background-image: url('../images/backgdound\ 2.jpg');
+  background-image: url('../images/background.png');
 }
 
 section[data-id="3"] .bg {
-  background-image: url('../images/backgdound\ 2.jpg');
+  background-image: url('../images/background.png');
 }
 
 section[data-id="4"] .bg {
-  background-image: url('../images/backgdound\ 2.jpg');
+  background-image: url('../images/background.png');
   
 }
 
 section[data-id="5"] .bg {
-  background-image: url('../images/backgdound\ 2.jpg');
+  background-image: url('../images/background.png');
 }
 section[data-id="7"] .bg {
-  background-image: url('../images/backgdound\ 2.jpg');
+  background-image: url('../images/background.png');
 }
 
 
@@ -182,7 +181,7 @@ section[data-id="3"] .right-side p {
 }
 
 section[data-id="3"] .bg {
-  background-image: url('../images/backgdound\ 2.jpg');
+  background-image: url('../images/background.png');
 }
 
 .gallery-content{
@@ -313,12 +312,7 @@ button:hover {
 }
 
 #dj2{
- 
  height:400px;
-
-
-
-
 }
 /* Ensure the section background is properly set */
 
@@ -375,16 +369,34 @@ button:hover {
 /* Styling sections for demo */
 
 
+#dj3{
+
+    height:700px;
+    right: -100px;
+
+}
+.flex-wrap{
+
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+
+}
 .image-grid{
+
+   padding:50px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 20px; /* Adjust the gap between images */
-  padding: 20px; /* Add padding around the grid */
+  gap: 10px; /* Adjust the gap between images */
+  padding: px; /* Add padding around the grid */
   max-width: 1200px; /* Limit the grid's max width */
   margin: 0 auto; /* Center the grid on the page */
 }
 
-
+.img-wrapper-right{
+  position: relative;
+}
 section[data-id="5"]{
   min-height: fit-content;
   display: flex ;

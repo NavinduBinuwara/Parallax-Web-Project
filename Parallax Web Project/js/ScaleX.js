@@ -64,7 +64,7 @@
   const name = document.querySelector('.name');
 
   gsap.to(image, {
-    scale: 4, // Scale up slightly
+    scale: 5, // Scale up slightly
     y: 200, // Move up slightly
     scrollTrigger: {
       trigger: "#section1",
@@ -190,15 +190,21 @@
 
 
 
-  sap.from(".title", {
-    scrollTrigger: {
-      trigger: ".title", // Element to trigger the animation
-      start: "top 80%",  // When the top of the title hits 80% of the viewport
-     
-    },
-    duration: 4,   
-    delay:2,// Animation duration (2 seconds)
-    x: -200,       // Slide in from left (-200px)
-    opacity: 0,    // Fade in from opacity 0
-    ease: "power2.out" // Ease effect for a smooth transition
-  });
+
+
+// const dj3 = document.querySelector("#dj3")
+// console.log(dj3)
+// const section5 = document.querySelector('#section5');
+// console.log(section5)
+//   gsap.to(dj3, {
+//     scale: 2, // Scale up slightly
+   
+//     x:-500,// Move up slightly
+//     scrollTrigger: {
+//       trigger: section5,
+//       start: "top top", // Start animation when the section hits the top of the viewport
+//       end: "bottom top", // End when the bottom of the section hits the top
+//       scrub: true, // Smooth animation based on scroll
+//     },
+//     ease: "bounce" // No easing for a linear effect
+//   });
