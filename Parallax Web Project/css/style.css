@@ -72,7 +72,7 @@ h1 {
 
 .parallax-img{
   width: fit-content;
-  height: 100%;
+  height: 70%;
   margin: auto;
   
 }
@@ -176,7 +176,7 @@ section[data-id="3"] .right-side {
 section[data-id="3"] .right-side p {
   font-size: 1.2em;
   line-height: 1.6;
-  color: #3c0d36;
+  color: #ffffff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
@@ -185,7 +185,8 @@ section[data-id="3"] .bg {
 }
 
 .gallery-content{
-background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('your-image-url.jpg');
+background: linear-gradient(  rgba(0, 0, 0, 0.5),  /* Top color with 50% opacity */
+rgba(0, 0, 0, 0.7) );
 background-size: cover;
 background-position: center;
 text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); 
@@ -258,10 +259,14 @@ button:hover {
   
   z-index: 1; 
 }
-
+.wrapper-dj2{
+display: flex;
+justify-content: center;
+}
 .wrapper-main{
   position: relative;
   display: flex;
+  flex-direction: column;
   
 }
 #title-4{
@@ -312,7 +317,8 @@ button:hover {
 }
 
 #dj2{
- height:400px;
+ height:350px;
+
 }
 /* Ensure the section background is properly set */
 
@@ -376,9 +382,10 @@ button:hover {
 
 }
 .flex-wrap{
-
+   display: flex;
+  flex-direction: column;
   width: 100%;
-  display: flex;
+
   justify-content: space-around;
 
 
@@ -389,17 +396,20 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
   gap: 10px; /* Adjust the gap between images */
-  padding: px; /* Add padding around the grid */
+  /* Add padding around the grid */
   max-width: 1200px; /* Limit the grid's max width */
   margin: 0 auto; /* Center the grid on the page */
 }
 
 .img-wrapper-right{
+  display: flex ;
+  justify-content: center;
   position: relative;
 }
 section[data-id="5"]{
   min-height: fit-content;
   display: flex ;
+  flex-direction:column;
   justify-content: center;
   align-items: center;
   padding: 20px;
@@ -417,6 +427,7 @@ a[data-fancybox="gallery"]{
 a[data-fancybox="gallery"] img{
   width: 100%;
   height: 100%;
+  aspect-ratio: 3/4;
   display: block;
   object-fit: cover; /* Ensure the images cover the container area */
 }
@@ -475,8 +486,33 @@ a[data-fancybox="gallery"] img{
  
   }
 }
+/* @media screen and (min-width:) {
+  .wrapper-main{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    
+  }
+} */
+@media screen and (min-width:1024px ){
 
+  .flex-wrap{
 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  
+  
+  }
+  .parallax-img{
+    width: fit-content;
+    height: 100%;
+    margin: auto;
+    
+  }
+
+}
 
 
 /* scale x section */

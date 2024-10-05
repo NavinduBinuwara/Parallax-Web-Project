@@ -65,7 +65,7 @@
 
   gsap.to(image, {
     scale: 5, // Scale up slightly
-    y: 200, // Move up slightly
+    y: 100, // Move up slightly
     scrollTrigger: {
       trigger: "#section1",
       start: "top top", // Start animation when the section hits the top of the viewport
@@ -77,9 +77,9 @@
 
 
   gsap.to(name, {
-    scale: 2, // Scale up slightly
+    scale: 1.5, // Scale up slightly
     y:-300,
-    x:-500, // Move up slightly
+    x:-300, // Move up slightly
     scrollTrigger: {
       trigger: "#section1",
       start: "top center", // Start animation when the section hits the top of the viewport
@@ -177,8 +177,8 @@
   // })
 
   gsap.to('#dj2', {
-    scale: 3,
-    y:300,
+    scale: 4,
+    y:250,
     scrollTrigger: {
       trigger: "#section4",
       start: "top 80%", 
