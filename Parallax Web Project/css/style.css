@@ -439,7 +439,6 @@ justify-content: center;
 /* Styling sections for demo */
 
 
-<<<<<<< HEAD
 /* hamburger menu ---------*/
 /* Styling for hamburger menu */
 .hamburger-menu {
@@ -529,6 +528,7 @@ justify-content: center;
  
 }
 
+
 /* Change hamburger icon to 'X' when open */
 .hamburger-menu.open .bar:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
@@ -544,40 +544,15 @@ justify-content: center;
 
 
 
-=======
-#dj3{
-
-    height:700px;
-    right: -100px;
-
-}
-.flex-wrap{
-   display: flex;
-  flex-direction: column;
-  width: 100%;
-
-  justify-content: space-around;
-
-
-}
->>>>>>> cadec43a23731e15dd3722a658b8a7b111c28893
 .image-grid{
 
    padding:50px;
   display: grid;
-<<<<<<< HEAD
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px;
   max-width: 1200px; 
   margin: 0 auto;
-=======
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 10px; /* Adjust the gap between images */
-  /* Add padding around the grid */
-  max-width: 1200px; /* Limit the grid's max width */
-  margin: 0 auto; /* Center the grid on the page */
->>>>>>> cadec43a23731e15dd3722a658b8a7b111c28893
 }
 
 .img-wrapper-right{

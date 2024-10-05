@@ -70,13 +70,8 @@
   const name = document.querySelector('.name');
 
   gsap.to(image, {
-<<<<<<< HEAD
     scale: 4, 
     y: 200,
-=======
-    scale: 5, // Scale up slightly
-    y: 100, // Move up slightly
->>>>>>> cadec43a23731e15dd3722a658b8a7b111c28893
     scrollTrigger: {
       trigger: "#section1",
       start: "top top",
@@ -88,15 +83,9 @@
 
 
   gsap.to(name, {
-<<<<<<< HEAD
     scale: 2, 
     y:-300,
     x:-500, 
-=======
-    scale: 1.5, // Scale up slightly
-    y:-300,
-    x:-300, // Move up slightly
->>>>>>> cadec43a23731e15dd3722a658b8a7b111c28893
     scrollTrigger: {
       trigger: "#section1",
       start: "top center", 
