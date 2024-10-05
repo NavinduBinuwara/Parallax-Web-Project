@@ -7,6 +7,37 @@ scroll-behavior: smooth;
 *{
   font-family: Roboto;
 }
+#section1{
+  position: relative;
+}
+
+  video{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  }
+
+  .smoke-wrap{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.8;
+  }
+  .smoke-wrap::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, #cf4f53 , #bf6c6e, #b47e7f, #a68c8d, #999999, #ffffff);
+  mix-blend-mode: color;
+  pointer-events: none;
+  }
+
+
 /* Bullet Navigation Bar */
 .bullet-nav {
   position: fixed;
@@ -74,8 +105,39 @@ h1 {
   width: fit-content;
   height: 100%;
   margin: auto;
-  
+
 }
+
+#body-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 12;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  max-height: calc(1.3em * 12);
+}
+
+#body-text.show {
+  -webkit-line-clamp: unset; 
+  max-height: 1000px; 
+}
+
+#read-more-btn {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+#read-more-btn:hover {
+  background-color: #0056b3;
+}
+
+
 
 /* section one name */
 .name{
@@ -375,13 +437,117 @@ button:hover {
 /* Styling sections for demo */
 
 
+/* hamburger menu ---------*/
+/* Styling for hamburger menu */
+.hamburger-menu {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* Mobile navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hidden off-screen by default */
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  transition: left 0.5s ease; /* Smooth transition */
+  z-index: 9999;
+}
+
+#navbar.open {
+  left: 0; /* Slide in from left */
+}
+
+#navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar ul li {
+  margin: 20px 0;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-family: 'Arial', sans-serif;
+  display: block;
+  text-align: left;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* Hover and active link styling remains the same */
+.nav-link:hover {
+  background-color: #333;
+}
+
+.nav-link.active {
+  background-color: #6C63FF;
+  color: white;
+}
+
+/* Mobile view - display hamburger */
+@media screen and (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+  .bar{
+    display: block;
+  }
+  #navbar {
+    left: -600px;
+    width: 100%;
+    height: 100%;
+  }
+  section[data-id="3"] .content-wrapper{
+    flex-direction: column;
+  }
+  #section5{
+    flex-direction: column;
+  }
+ 
+}
+
+/* Change hamburger icon to 'X' when open */
+.hamburger-menu.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.open .bar:nth-child(2) {
+  opacity: 0; /* Hide the middle bar */
+}
+
+.hamburger-menu.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+
 .image-grid{
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 20px; /* Adjust the gap between images */
-  padding: 20px; /* Add padding around the grid */
-  max-width: 1200px; /* Limit the grid's max width */
-  margin: 0 auto; /* Center the grid on the page */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px; 
+  margin: 0 auto;
 }
 
 

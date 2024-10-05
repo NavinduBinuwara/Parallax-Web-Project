@@ -33,6 +33,12 @@
 </head>
 <body>
 
+  <div id="hamburger-menu" class="hamburger-menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
   <nav id="navbar">
     <ul>
       <li><a href="#section1" class="nav-link">Home</a></li>
@@ -43,16 +49,19 @@
     </ul>
   </nav>
  
-<section data-id="1" id="section1">
-  <div class="bg">
-    <img src="./images/homeimg.png" alt="" class="parallax-img">
-    <img src="./images/name.png"  class="name" data-aos="fade-left"
-    data-aos-anchor="#example-anchor"
-    data-aos-offset="500"
-    data-aos-duration="500">/>
-    <h1 >Home</h1>
-  </div>
-</section>
+  <section data-id="1" id="section1">
+    <div class="bg">
+      <img src="./images/homeimg.png" alt="" class="parallax-img">
+      <img src="./images/name.png"  class="name img-name" data-aos="fade-left"
+      data-aos-anchor="#example-anchor"
+      data-aos-offset="500"
+      data-aos-duration="500">/>
+      <h1 >Home</h1>
+      <div class="smoke-wrap">
+        <video autoplay loop src="https://video.wixstatic.com/video/d47472_58cce06729c54ccb935886c4b3647274/1080p/mp4/file.mp4" autoplay muted></video>
+      </div>
+    </div>
+  </section>
 
 <section data-id="4" id="section4"> 
   <div class="title-wrapper"><h1 id="title-4" class="title" data-aos="fade-up"
@@ -181,11 +190,14 @@
       <img src="./images/27.JPG" alt="Example Image" class="gallery-img">
     </div>
     <div class="right-side" data-aos="fade-left">
-      <p id="body-text">Gelernter EFZ Logistiker, geboren und aufgewachsen im Süden Sri Lanka` s, wollte schon seit er denken kann mit Musik arbeiten. Als Junge legte er bereits schon in diversen namhaften Clubs in Sri Lankas auf und arbeitete in mehreren Hotels als Resident DJ. Seiner Zeit orientierte er sich nach dem R&B, Pop und dem damaligen Street-Dance Trend. 
+      <p id="body-text">
+        Gelernter EFZ Logistiker, geboren und aufgewachsen im Süden Sri Lanka` s, wollte schon seit er denken kann mit Musik arbeiten. Als Junge legte er bereits schon in diversen namhaften Clubs in Sri Lankas auf und arbeitete in mehreren Hotels als Resident DJ. Seiner Zeit orientierte er sich nach dem R&B, Pop und dem damaligen Street-Dance Trend. 
         Durch den Umzug in die Schweiz, im Jahr 2000, lernte er das Zürcher Nachtleben kennen und sah + hörte eine Neue Welt. Neben R&B dominieren hier auch Trance und House die Szene, die Technik ist meist vom Feinsten und die Party' s sind total abgefahren. House hat ihn von Beginn an gepackt. Von da an tüftelte er an seinem neuen Stil und übte stundenlang die neuen Mixtechniken die er in den Clubs hörte. Darum sah man ihn auch äußerst selten tanzen... er hat keine Zeit... er konzentriert sich gerade ;-) 
         Geschafft! Mitte 2002 der Einstieg im Rotor in Wetzikon ZH. In derselben Zeit pendelte er nach Deutschland, legte dort in diversen kleinen Clubs auf und genoss es endlich wieder vor Publikum aufzutreten. 
         Anfangs 2003 folgten die ersten eigenen Themen -Party` s in der Blue Box in Niederurnen GL. 2004 traf er auf DJ Nick und DJ Tomstone. Die Beiden haben das Potential, den Biss und den Typen Roshan entdeckt, unterstützten und prägten ihn sehr in seiner darauf folgenden Laufbahn. So kamen regelmäßige Bookings im Beach-Club in Hinwil ZH, P1 in Dübendorf ZH und im Magic in Jona SG. Nebenbei ergaben sich weitere interessante Events wo er die Line-up's für einige der bekanntesten DJ's wie DJ Antoine, Remdy, sir-colin , Mr.Da -Nos Feat Roby Rob, The Good Guys. Christopher s, Tatana, Tanja La Croix, Mr.Pink, DJ Whiteside, und Ralf Imholf machte. 2005 ein weiteres Highlight war das Sommerfestival am Hauptbahnhof in Zürich-City wo er das Line-up für den Raggae- Star Jimmy Cliff ausrichtete.
+        </span>
         </p>
+        <button id="read-more-btn">Read More</button>
     </div>
   </div>
 </section>
@@ -210,6 +222,39 @@
           </div>
          </div>
   </section> -->
+
+  <section data-id="5" id="section5" data-aos="fade-up">
+    <h1 class="title" data-aos="fade-up" data-aos-anchor-placement="bottom-center">Contact Us</h1>
+    <div class="bg"></div>
+    <div class="content-wrapper contact-content">
+      <div class="left-side" data-aos="fade-right">
+        <p>Get in touch with us for any inquiries or reservations!</p>
+        <ul class="contact-details">
+          <li><strong>Phone:</strong> +94 123 456 789</li>
+          <li><strong>Email:</strong> info@DJ Roshan.com</li>
+          <li><strong>Location:</strong> 123 America St, Sri Lanka</li>
+        </ul>
+      </div>
+      <div class="right-side" data-aos="fade-left">
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" id="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
 
 
 

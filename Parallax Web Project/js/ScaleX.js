@@ -64,52 +64,40 @@
   const name = document.querySelector('.name');
 
   gsap.to(image, {
-    scale: 4, // Scale up slightly
-    y: 200, // Move up slightly
+    scale: 4, 
+    y: 200,
     scrollTrigger: {
       trigger: "#section1",
-      start: "top top", // Start animation when the section hits the top of the viewport
-      end: "bottom top", // End when the bottom of the section hits the top
-      scrub: true, // Smooth animation based on scroll
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
     },
-    ease: "none" // No easing for a linear effect
+    ease: "none" 
   });
 
 
   gsap.to(name, {
-    scale: 2, // Scale up slightly
+    scale: 2, 
     y:-300,
-    x:-500, // Move up slightly
+    x:-500, 
     scrollTrigger: {
       trigger: "#section1",
-      start: "top center", // Start animation when the section hits the top of the viewport
-      end: "bottom top", // End when the bottom of the section hits the top
-      scrub: true, // Smooth animation based on scroll
+      start: "top center", 
+      end: "bottom top", 
+      scrub: true,
     },
-    ease: "none" // No easing for a linear effect
+    ease: "none" 
   });
 
 
-  // gsap.to('.gallery-img', {
-  //   scale: 0.4, // Scale up slightly
-  //   y:0,
-  //   x:-500, // Move up slightly
-  //   scrollTrigger: {
-  //     trigger: "#section3",
-  //     start: "top center", // Start animation when the section hits the top of the viewport
-  //     end: "bottom top", // End when the bottom of the section hits the top
-  //     scrub: true, // Smooth animation based on scroll
-  //   },
-  //   ease: "none" // No easing for a linear effect
-  // });
 
 
   const A3 = gsap.timeline({
     scrollTrigger: {
       trigger: "#section3",
-      start: "top 100%",  // Start the animation when the section's top hits the center of the viewport
-      end: "bottom center", // End when the section's bottom hits the center of the viewport
-      scrub: 1, // Smooth animation on scroll
+      start: "top 100%",  
+      end: "bottom center", 
+      scrub: 1,
  
     }
   });
@@ -119,21 +107,21 @@
     scale: 0.1,
     rotate: -10,
     x: -1000,
-    duration: 0.1, // Slower animation
+    duration: 0.1,
     
   })
   .to(".content-wrapper", {
     scale: 0.8,
     rotate: 0,
     x: 400,
-    duration: 0.1, // Slower animation
+    duration: 0.1, 
     delay: 0,
   })
   .to(".gallery-img", {
     scale: 0.9,
     rotate: 0,
     x: 0,
-    duration: 0.1, // Slower animation
+    duration: 0.1,
    
   })
   .to(".content-wrapper", {
