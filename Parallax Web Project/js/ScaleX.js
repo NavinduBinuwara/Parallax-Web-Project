@@ -185,20 +185,3 @@
 
 
 
-
-// const dj3 = document.querySelector("#dj3")
-// console.log(dj3)
-// const section5 = document.querySelector('#section5');
-// console.log(section5)
-//   gsap.to(dj3, {
-//     scale: 2, // Scale up slightly
-   
-//     x:-500,// Move up slightly
-//     scrollTrigger: {
-//       trigger: section5,
-//       start: "top top", // Start animation when the section hits the top of the viewport
-//       end: "bottom top", // End when the bottom of the section hits the top
-//       scrub: true, // Smooth animation based on scroll
-//     },
-//     ease: "bounce" // No easing for a linear effect
-//   });
