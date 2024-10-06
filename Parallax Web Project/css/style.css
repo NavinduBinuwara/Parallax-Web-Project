@@ -316,7 +316,7 @@ button:hover {
     rgba(0, 0, 0, 0.7)   /* Bottom color with 70% opacity */
   );
   padding: 40px 20;
-  border: 1ox solid red;
+ 
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 4 videos per row */
   gap: 20px;
@@ -525,8 +525,9 @@ justify-content: center;
   section[data-id="3"] .content-wrapper{
     flex-direction: column;
   }
-  #section5{
+  #section6{
     flex-direction: column;
+    text-align: center;
   }
   .smoke-wrap{
     height: 100%;
@@ -551,6 +552,7 @@ justify-content: center;
   width: 90%;
  }
  #submit-btn{
+  font-size: 16px;
   width: 80%;
   margin: auto;
  }

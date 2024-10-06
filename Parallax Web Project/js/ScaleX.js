@@ -139,36 +139,6 @@
   })
 
 
-  // const A2 = gsap.timeline({
-  //   scrollTrigger: {
-  //     trigger: "#section2",
-  //     start: "top 100%",  // Start the animation when the section's top hits the center of the viewport
-  //     end: "bottom center", // End when the section's bottom hits the center of the viewport
-  //     scrub: true, // Smooth animation on scroll
-  //      // Enable markers for debugging
-  //   }
-  // });
-  // // First phase: Expand the card from one side
-  // A3.to(".slider",{
-   
-  //   scale:2,
-  //   rotate:46,
-   
-  //   duration: 0.3,
-  // })  
-  // A3.to(".slider",{
-    
-  //   scale:10,
-  //   rotate:1,
-  //   x:-20,
-  //   duration: 0.7,
-  // }) 
-  //  A3.to(".slider",{
-  
-  //   scale:1,
-  //   x:0,
-  //   duration: 0.8,
-  // })
 
   gsap.to('#dj2', {
     scale: 4,
