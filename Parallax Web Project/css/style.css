@@ -124,9 +124,10 @@ h1 {
 }
 
 #read-more-btn {
-  background-color: #007BFF;
+  background-color: #272637;
   color: white;
   padding: 10px;
+  font-size: 20px;
   border: none;
   cursor: pointer;
   border-radius: 10px;
@@ -390,7 +391,9 @@ justify-content: center;
 /* Ensure the section background is properly set */
 
 
-
+#section5{
+  position: relative;
+}
 
 /*--------------------------nav bar---------------------------*/
 /* Navbar container */
@@ -430,12 +433,12 @@ justify-content: center;
 
 /* Hover effect */
 .nav-link:hover {
-  background-color: #333;
+  background-color: #272637;
 }
 
 /* Active link when section is in view */
 .nav-link.active {
-  background-color: #6C63FF; /* Active color */
+  background-color: #272637; /* Active color */
   color: white;
 }
 
@@ -505,7 +508,7 @@ justify-content: center;
 }
 
 .nav-link.active {
-  background-color: #6C63FF;
+  background-color: #272637;
   color: white;
 }
 
@@ -526,8 +529,16 @@ justify-content: center;
     flex-direction: column;
   }
   #section6{
+    position: relative;
     flex-direction: column;
     text-align: center;
+  }
+
+  #dj4{
+    position: absolute;
+     display: none;
+    right:300px;
+    height:200px;
   }
   .smoke-wrap{
     height: 100%;
@@ -688,6 +699,19 @@ a[data-fancybox="gallery"] img{
   
 
   }
+  #section6{
+
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #dj4{
+    position: absolute;
+     display: block;
+    right:200px;
+    height:500px;
+  }
 
   .name{
     height:120px;
@@ -703,7 +727,14 @@ a[data-fancybox="gallery"] img{
     grid-template-columns: repeat(3,1fr);
     width:50%;
   }
-
+  #dj5{
+    height:600px;
+    position:absolute;
+    right:100px;
+     top:0;
+     display: block;
+  
+  }
 }
 
 
@@ -815,4 +846,19 @@ height: 200px;
 
 #dj3{
   height:500px;
+}
+
+/* sect 3 */
+
+#section3{
+position: relative;
+}
+
+#dj5{
+  height:600px;
+  position:absolute;
+  right:100px;
+   top:0;
+ 
+
 }
