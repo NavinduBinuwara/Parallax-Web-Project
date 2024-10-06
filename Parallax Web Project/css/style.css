@@ -102,6 +102,7 @@ h1 {
 }
 
 .parallax-img{
+  padding-top: 100px;
   width: fit-content;
   height: 70%;
   margin: auto;
@@ -141,10 +142,13 @@ h1 {
 
 /* section one name */
 .name{
+  
+height:80px;
  transform: rotate(15deg);
  z-index:1;
  top:900vh;
- right:-30vw;
+ /* right:-30vw; */
+
 }
 /* section one name */
 
@@ -658,8 +662,14 @@ a[data-fancybox="gallery"] img{
 
   
   
+
+  }
+
+  .name{
+    height:120px;
   }
   .parallax-img{
+    padding-top:0px;
     width: fit-content;
     height: 100%;
     margin: auto;

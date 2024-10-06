@@ -84,8 +84,8 @@
 
   gsap.to(name, {
     scale: 2, 
-    y:-300,
-    x:-500, 
+    y:-200,
+    x:-400, 
     scrollTrigger: {
       trigger: "#section1",
       start: "top center", 
