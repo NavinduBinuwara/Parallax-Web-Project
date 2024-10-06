@@ -531,6 +531,9 @@ justify-content: center;
   .smoke-wrap{
     height: 100%;
   }
+  section[data-id="3"] .left-side img{
+    height: 55vh;
+  }
  
 }
 
