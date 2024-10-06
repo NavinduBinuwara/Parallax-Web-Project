@@ -534,7 +534,16 @@ justify-content: center;
   section[data-id="3"] .left-side img{
     height: 55vh;
   }
- 
+ .gallery-content{
+  transform: translate3d(0.6717px, 0px, 0px) scale(0.9996, 0.9996) !important;
+ }
+ .contact-content{
+  transform: translate(0px, 0px) !important;
+  width: 70%;
+ }
+ #navbar{
+  width: 90%;
+ }
 }
 
 /* Change hamburger icon to 'X' when open */
