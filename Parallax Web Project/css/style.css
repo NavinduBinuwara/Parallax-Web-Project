@@ -536,9 +536,9 @@ justify-content: center;
 
   #dj4{
     position: absolute;
-     display: none;
-    right:300px;
-    height:200px;
+     /* display: none; */
+    right:200px;
+    height:300px;
   }
   .smoke-wrap{
     height: 100%;
