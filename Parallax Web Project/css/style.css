@@ -544,6 +544,16 @@ justify-content: center;
  #navbar{
   width: 90%;
  }
+ .footer-wrapper{
+  flex-direction: column;
+ }
+ .form-group input, .form-group textarea{
+  width: 90%;
+ }
+ #submit-btn{
+  width: 80%;
+  margin: auto;
+ }
 }
 
 /* Change hamburger icon to 'X' when open */
